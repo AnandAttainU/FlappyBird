@@ -8,3 +8,5 @@ Run these commands: \
 
 # Install pygame
 ``pip3 install pygame``
+
+Check a basic pygame code and try to run it.

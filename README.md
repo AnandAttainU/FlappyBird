@@ -12,3 +12,11 @@ Run these commands: \
 
 Check a basic pygame code and try to run it.
 
+# Entities:
+ Bird
+ Pipe
+ Ground
+ Background
+ Score
+ Scoreboard
+ Restart

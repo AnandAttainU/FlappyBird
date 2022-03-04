@@ -16,9 +16,11 @@ def run():
     pipe = Pipe()
 
     GRAVITYEVENT = pygame.USEREVENT + 1
+    DRAWPIPEEVENT = pygame.USEREVENT + 2
 
     pygame.time.set_timer(pygame.USEREVENT, 150)
     pygame.time.set_timer(GRAVITYEVENT, 80)
+    pygame.time.set_timer(DRAWPIPEEVENT, 1500)
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -30,12 +32,15 @@ def run():
                     bird.jump()
             if event.type == GRAVITYEVENT:
                 bird.applyGravity()
+            if event.type == DRAWPIPEEVENT:
+                pipe.draw_pipe()     
         
         background.display(screen)
-        
+        pipe.move_pipe()
         bird.display(screen)
-        ground.display(screen)
         pipe.display(screen)
+
+        ground.display(screen)
         pygame.display.flip()
 
 if __name__ == "__main__":
